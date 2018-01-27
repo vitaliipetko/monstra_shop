@@ -1,0 +1,158 @@
+header
+	background: $main
+	padding-top: 15px
+	.nav
+		&__lang
+			color: #fff
+			letter-spacing: 0.7px
+			position: relative
+			display: inline
+			cursor: pointer
+			margin-right: 30px
+			padding-bottom: 20px
+			&:after
+				font-family: $ff
+				content: '\f107'
+				position: absolute
+				display: block
+				right: -10px
+				top: 0
+			&:hover 
+				& li
+					display: block
+					background-color: #FFF
+			li
+				display: none
+				position: absolute
+				padding: 5px 10px 7px
+				z-index: 10
+				&:hover
+					display: block
+				a
+					color: $main
+		&__phone
+			color: #fff
+			position: relative
+			padding-left: 20px
+			letter-spacing: 0.9px
+			&:before
+				content: url('../images/icons/phone.svg')
+				display: block
+				position: absolute
+				left: -2px
+				top: 0
+		&__instagram
+			display: inline-block
+			margin-left: 20px
+			position: relative
+			top: 5px
+		&__fb
+			display: inline-block
+			margin-left: 10px
+			position: relative
+			top: 5px
+		&__cabinet
+			display: inline-block
+			position: relative
+			top: 5px
+		&__favorits
+			display: inline-block
+			position: relative
+			top: 5px
+			margin-left: 15px
+		&__cart
+			display: inline-block
+			position: relative
+			top: 5px
+			margin-left: 15px
+		&__search
+			display: inline
+			position: relative
+			margin-left: 20px
+			input[type=text]
+				border: none
+				padding: 5px 11px 3px
+				border-radius: 10px
+				width: 120px
+				margin-right: 10px
+				letter-spacing: 2.5px
+			&--btn
+				border: none
+				background-color: transparent
+				z-index: 10
+				width: 20px
+				height: 20px
+				padding: 5px
+				position: relative
+				cursor: pointer
+			&:before
+				content: url('../images/icons/search.svg')
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				z-index: 1
+				cursor: pointer
+		&__logo
+			max-width: 320px
+			position: relative
+			top: -8px
+	nav
+		padding-top: 24px
+		.nav__main-menu
+			text-align: center
+			z-index: 999
+			position: relative
+			&--title
+				color: #000
+				font-family: $medium
+				font-size: 18px
+				a
+					color: #000
+					font-family: $medium
+					font-size: 18px
+					&:hover
+						color: $main
+			&--item
+				display: inline-block
+				padding: 0px 28px
+				color: #fff
+				letter-spacing: 0.1px
+				text-transform: uppercase
+				position: relative
+				cursor: pointer
+				padding-bottom: 15px
+				transition: all .4s
+				&:hover
+					color: $hover
+					.box
+						display: block
+				.box
+					text-align: left
+					display: none
+					left: 50%
+					width: 500px
+					transform: translate(-50%)
+					top: 37px
+					position: absolute
+					padding: 20px 30px
+					background: url('../images/content/menu_bcg.png') no-repeat top right #fff
+					background-size: cover
+					&:after
+						content: ''
+						display: table
+						clear: both
+					ul
+						margin-bottom: 20px
+						li
+							display: block
+							padding: 0
+							padding-top: 5px
+							&:first-child
+								margin-top: 10px
+						a
+							color: #000
+							font-family: $regular
+							text-transform: none
+							&:hover
+								color: $hover
