@@ -10,6 +10,8 @@ header
 			cursor: pointer
 			margin-right: 30px
 			padding-bottom: 20px
+			top: 0
+			transition: all .4s
 			&:after
 				font-family: $ff
 				content: '\f107'
@@ -17,7 +19,9 @@ header
 				display: block
 				right: -10px
 				top: 0
-			&:hover 
+			&:hover
+				&:after
+					top: 0
 				& li
 					display: block
 					background-color: #FFF
@@ -35,40 +39,55 @@ header
 			position: relative
 			padding-left: 20px
 			letter-spacing: 0.9px
+			top: 0
+			transition: all .4s
 			&:before
 				content: url('../images/icons/phone.svg')
 				display: block
 				position: absolute
 				left: -2px
 				top: 0
+			&:hover
+				top: -5px
 		&__instagram
 			display: inline-block
 			margin-left: 20px
 			position: relative
 			top: 5px
+			&:hover
+				top: 0
 		&__fb
 			display: inline-block
 			margin-left: 10px
 			position: relative
 			top: 5px
+			&:hover
+				top: 0
 		&__cabinet
 			display: inline-block
 			position: relative
 			top: 5px
+			&:hover
+				top: 0
 		&__favorits
 			display: inline-block
 			position: relative
 			top: 5px
 			margin-left: 15px
+			&:hover
+				top: 0
 		&__cart
 			display: inline-block
 			position: relative
 			top: 5px
 			margin-left: 15px
+			&:hover
+				top: 0
 		&__search
 			display: inline
 			position: relative
 			margin-left: 20px
+			transition: all .4s
 			input[type=text]
 				border: none
 				padding: 5px 11px 3px
@@ -93,6 +112,8 @@ header
 				right: 0
 				z-index: 1
 				cursor: pointer
+			&:hover
+				padding-top: 5px
 		&__logo
 			max-width: 320px
 			position: relative
@@ -107,12 +128,17 @@ header
 				color: #000
 				font-family: $medium
 				font-size: 18px
+				padding: 0px 10px
 				a
 					color: #000
 					font-family: $medium
 					font-size: 18px
+					margin: 0px -10px
+					padding: 0px 10px
+					display: block
 					&:hover
-						color: $main
+						background-color: $main
+						color: #fff
 			&--item
 				display: inline-block
 				padding: 0px 28px
@@ -125,17 +151,21 @@ header
 				transition: all .4s
 				&:hover
 					color: $hover
-					.box
+					background-color: #FFF
+					.box-col-1,.box-col-2
+						visible: visible
 						display: block
-				.box
+				.box-col-1,.box-col-2
+					visible: hidden
+					cursor: default
 					text-align: left
 					display: none
-					left: 50%
 					width: 500px
+					left: 50%
 					transform: translate(-50%)
 					top: 37px
 					position: absolute
-					padding: 20px 30px
+					padding: 20px 20px
 					background: url('../images/content/menu_bcg.png') no-repeat top right #fff
 					background-size: cover
 					&:after
@@ -146,13 +176,28 @@ header
 						margin-bottom: 20px
 						li
 							display: block
-							padding: 0
+							padding: 0px 10px
 							padding-top: 5px
+							transition: all .4s
+							&:hover
+								background-color: $main
 							&:first-child
 								margin-top: 10px
 						a
 							color: #000
 							font-family: $regular
 							text-transform: none
+							display: block
 							&:hover
-								color: $hover
+								color: #fff
+				.box-col-1
+					width: 250px
+					ul
+						margin-bottom: 0
+						li
+							a
+								font-family: $medium
+								font-size: 18px
+								text-transform: uppercase
+							&:first-child
+								margin: 0

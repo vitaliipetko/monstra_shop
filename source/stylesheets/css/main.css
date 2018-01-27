@@ -101,6 +101,10 @@ main {
 
 a {
   text-decoration: none;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
 img {
@@ -119,11 +123,11 @@ input, textarea, select {
   vertical-align: top;
 }
 
-.transition, a, input[type="submit"] {
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.transition, input[type="submit"] {
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
 .container {
@@ -685,6 +689,11 @@ header .nav__lang {
   cursor: pointer;
   margin-right: 30px;
   padding-bottom: 20px;
+  top: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
 header .nav__lang:after {
@@ -693,6 +702,10 @@ header .nav__lang:after {
   position: absolute;
   display: block;
   right: -10px;
+  top: 0;
+}
+
+header .nav__lang:hover:after {
   top: 0;
 }
 
@@ -721,6 +734,11 @@ header .nav__phone {
   position: relative;
   padding-left: 20px;
   letter-spacing: 0.9px;
+  top: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
 header .nav__phone:before {
@@ -731,11 +749,19 @@ header .nav__phone:before {
   top: 0;
 }
 
+header .nav__phone:hover {
+  top: -5px;
+}
+
 header .nav__instagram {
   display: inline-block;
   margin-left: 20px;
   position: relative;
   top: 5px;
+}
+
+header .nav__instagram:hover {
+  top: 0;
 }
 
 header .nav__fb {
@@ -745,10 +771,18 @@ header .nav__fb {
   top: 5px;
 }
 
+header .nav__fb:hover {
+  top: 0;
+}
+
 header .nav__cabinet {
   display: inline-block;
   position: relative;
   top: 5px;
+}
+
+header .nav__cabinet:hover {
+  top: 0;
 }
 
 header .nav__favorits {
@@ -758,6 +792,10 @@ header .nav__favorits {
   margin-left: 15px;
 }
 
+header .nav__favorits:hover {
+  top: 0;
+}
+
 header .nav__cart {
   display: inline-block;
   position: relative;
@@ -765,10 +803,18 @@ header .nav__cart {
   margin-left: 15px;
 }
 
+header .nav__cart:hover {
+  top: 0;
+}
+
 header .nav__search {
   display: inline;
   position: relative;
   margin-left: 20px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
 header .nav__search input[type=text] {
@@ -803,6 +849,10 @@ header .nav__search:before {
   cursor: pointer;
 }
 
+header .nav__search:hover {
+  padding-top: 5px;
+}
+
 header .nav__logo {
   max-width: 320px;
   position: relative;
@@ -823,16 +873,21 @@ header nav .nav__main-menu--title {
   color: #000;
   font-family: "Avenir Next Cyr Medium";
   font-size: 18px;
+  padding: 0px 10px;
 }
 
 header nav .nav__main-menu--title a {
   color: #000;
   font-family: "Avenir Next Cyr Medium";
   font-size: 18px;
+  margin: 0px -10px;
+  padding: 0px 10px;
+  display: block;
 }
 
 header nav .nav__main-menu--title a:hover {
-  color: #ff96ce;
+  background-color: #ff96ce;
+  color: #fff;
 }
 
 header nav .nav__main-menu--item {
@@ -852,17 +907,21 @@ header nav .nav__main-menu--item {
 
 header nav .nav__main-menu--item:hover {
   color: #fc53ad;
+  background-color: #FFF;
 }
 
-header nav .nav__main-menu--item:hover .box {
+header nav .nav__main-menu--item:hover .box-col-1, header nav .nav__main-menu--item:hover .box-col-2 {
+  visible: visible;
   display: block;
 }
 
-header nav .nav__main-menu--item .box {
+header nav .nav__main-menu--item .box-col-1, header nav .nav__main-menu--item .box-col-2 {
+  visible: hidden;
+  cursor: default;
   text-align: left;
   display: none;
-  left: 50%;
   width: 500px;
+  left: 50%;
   -webkit-transform: translate(-50%);
      -moz-transform: translate(-50%);
       -ms-transform: translate(-50%);
@@ -870,7 +929,7 @@ header nav .nav__main-menu--item .box {
           transform: translate(-50%);
   top: 37px;
   position: absolute;
-  padding: 20px 30px;
+  padding: 20px 20px;
   background: url("../images/content/menu_bcg.png") no-repeat top right #fff;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -878,34 +937,61 @@ header nav .nav__main-menu--item .box {
           background-size: cover;
 }
 
-header nav .nav__main-menu--item .box:after {
+header nav .nav__main-menu--item .box-col-1:after, header nav .nav__main-menu--item .box-col-2:after {
   content: '';
   display: table;
   clear: both;
 }
 
-header nav .nav__main-menu--item .box ul {
+header nav .nav__main-menu--item .box-col-1 ul, header nav .nav__main-menu--item .box-col-2 ul {
   margin-bottom: 20px;
 }
 
-header nav .nav__main-menu--item .box ul li {
+header nav .nav__main-menu--item .box-col-1 ul li, header nav .nav__main-menu--item .box-col-2 ul li {
   display: block;
-  padding: 0;
+  padding: 0px 10px;
   padding-top: 5px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
 }
 
-header nav .nav__main-menu--item .box ul li:first-child {
+header nav .nav__main-menu--item .box-col-1 ul li:hover, header nav .nav__main-menu--item .box-col-2 ul li:hover {
+  background-color: #ff96ce;
+}
+
+header nav .nav__main-menu--item .box-col-1 ul li:first-child, header nav .nav__main-menu--item .box-col-2 ul li:first-child {
   margin-top: 10px;
 }
 
-header nav .nav__main-menu--item .box ul a {
+header nav .nav__main-menu--item .box-col-1 ul a, header nav .nav__main-menu--item .box-col-2 ul a {
   color: #000;
   font-family: "Avenir Next Cyr";
   text-transform: none;
+  display: block;
 }
 
-header nav .nav__main-menu--item .box ul a:hover {
-  color: #fc53ad;
+header nav .nav__main-menu--item .box-col-1 ul a:hover, header nav .nav__main-menu--item .box-col-2 ul a:hover {
+  color: #fff;
+}
+
+header nav .nav__main-menu--item .box-col-1 {
+  width: 250px;
+}
+
+header nav .nav__main-menu--item .box-col-1 ul {
+  margin-bottom: 0;
+}
+
+header nav .nav__main-menu--item .box-col-1 ul li a {
+  font-family: "Avenir Next Cyr Medium";
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+header nav .nav__main-menu--item .box-col-1 ul li:first-child {
+  margin: 0;
 }
 
 main {
@@ -993,7 +1079,7 @@ main {
 }
 
 .footer__find--link-fb:hover {
-  color: #fc53ad;
+  padding-left: 10px;
 }
 
 .footer__find--link-ins {
@@ -1013,7 +1099,7 @@ main {
 }
 
 .footer__find--link-ins:hover {
-  color: #fc53ad;
+  padding-left: 10px;
 }
 
 .footer__nav li {
@@ -1025,10 +1111,13 @@ main {
 .footer__nav li a {
   color: #fff;
   text-transform: uppercase;
+  display: block;
 }
 
 .footer__nav li a:hover {
+  padding-left: 10px;
   color: #fc53ad;
+  background-color: #FFF;
 }
 
 .footer__stories p {
