@@ -124,21 +124,6 @@ header
 			text-align: center
 			z-index: 999
 			position: relative
-			&--title
-				color: #000
-				font-family: $medium
-				font-size: 18px
-				padding: 0px 10px
-				a
-					color: #000
-					font-family: $medium
-					font-size: 18px
-					margin: 0px -10px
-					padding: 0px 10px
-					display: block
-					&:hover
-						background-color: $main
-						color: #fff
 			&--item
 				display: inline-block
 				padding: 0px 28px
@@ -149,7 +134,11 @@ header
 				cursor: pointer
 				padding-bottom: 15px
 				transition: all .4s
+				&-link
+					color: #fff
 				&:hover
+					.nav__main-menu--item-link 
+						color: $hover
 					color: $hover
 					background-color: #FFF
 					.box-col-1,.box-col-2
@@ -189,6 +178,7 @@ header
 							text-transform: none
 							display: block
 							&:hover
+								padding-left: 10px
 								color: #fff
 				.box-col-1
 					width: 250px
@@ -201,3 +191,19 @@ header
 								text-transform: uppercase
 							&:first-child
 								margin: 0
+			&--title
+				color: #000
+				font-family: $medium
+				font-size: 18px
+				padding: 0px 10px
+				a
+					color: #000
+					font-family: $medium
+					font-size: 18px
+					margin: 0px -10px
+					padding: 0px 10px
+					display: block
+					&:hover
+						padding-left: 20px
+						background-color: $main
+						color: #fff

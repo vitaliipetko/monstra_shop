@@ -869,27 +869,6 @@ header nav .nav__main-menu {
   position: relative;
 }
 
-header nav .nav__main-menu--title {
-  color: #000;
-  font-family: "Avenir Next Cyr Medium";
-  font-size: 18px;
-  padding: 0px 10px;
-}
-
-header nav .nav__main-menu--title a {
-  color: #000;
-  font-family: "Avenir Next Cyr Medium";
-  font-size: 18px;
-  margin: 0px -10px;
-  padding: 0px 10px;
-  display: block;
-}
-
-header nav .nav__main-menu--title a:hover {
-  background-color: #ff96ce;
-  color: #fff;
-}
-
 header nav .nav__main-menu--item {
   display: inline-block;
   padding: 0px 28px;
@@ -905,9 +884,17 @@ header nav .nav__main-menu--item {
   transition: all .4s;
 }
 
+header nav .nav__main-menu--item-link {
+  color: #fff;
+}
+
 header nav .nav__main-menu--item:hover {
   color: #fc53ad;
   background-color: #FFF;
+}
+
+header nav .nav__main-menu--item:hover .nav__main-menu--item-link {
+  color: #fc53ad;
 }
 
 header nav .nav__main-menu--item:hover .box-col-1, header nav .nav__main-menu--item:hover .box-col-2 {
@@ -973,6 +960,7 @@ header nav .nav__main-menu--item .box-col-1 ul a, header nav .nav__main-menu--it
 }
 
 header nav .nav__main-menu--item .box-col-1 ul a:hover, header nav .nav__main-menu--item .box-col-2 ul a:hover {
+  padding-left: 10px;
   color: #fff;
 }
 
@@ -992,6 +980,28 @@ header nav .nav__main-menu--item .box-col-1 ul li a {
 
 header nav .nav__main-menu--item .box-col-1 ul li:first-child {
   margin: 0;
+}
+
+header nav .nav__main-menu--title {
+  color: #000;
+  font-family: "Avenir Next Cyr Medium";
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+header nav .nav__main-menu--title a {
+  color: #000;
+  font-family: "Avenir Next Cyr Medium";
+  font-size: 18px;
+  margin: 0px -10px;
+  padding: 0px 10px;
+  display: block;
+}
+
+header nav .nav__main-menu--title a:hover {
+  padding-left: 20px;
+  background-color: #ff96ce;
+  color: #fff;
 }
 
 main {
@@ -1359,4 +1369,119 @@ main {
 
 .main-stories__item--link:hover {
   color: #fc53ad;
+}
+
+.runway-page__title {
+  background: url("../images/content/runway_title.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  padding-top: 12%;
+  text-align: center;
+  border-bottom: 30px solid #f9e8f2;
+}
+
+.runway-page__title--text {
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 120px;
+  font-family: "Avenir Next Cyr Bold";
+  line-height: 1.2;
+  padding-bottom: 12%;
+  cursor: default;
+}
+
+.runway-page__items {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.runway-page__items--item {
+  padding-bottom: 20px;
+}
+
+.runway-page__items--item a {
+  display: block;
+  position: relative;
+}
+
+.runway-page__items--item a:hover {
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 999;
+}
+
+.runway-page__items--item img {
+  width: 100%;
+}
+
+.runway-page__items--item-title {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.runway-page__items--item-title span {
+  display: block;
+  font-size: 24px;
+}
+
+.info {
+  border-bottom: 30px solid #f9e8f2;
+  border-top: 30px solid #f9e8f2;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.info .container {
+  max-width: 480px;
+}
+
+.info a {
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.info a:hover {
+  color: #fff;
+  padding-left: 20px;
+  background-color: #ff96ce;
+}
+
+.women-page__title {
+  background: url("../images/content/women_title.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  padding-top: 12%;
+  text-align: center;
+}
+
+.women-page__title--text {
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 120px;
+  font-family: "Avenir Next Cyr Bold";
+  line-height: 1.2;
+  padding-bottom: 12%;
+  cursor: default;
 }
