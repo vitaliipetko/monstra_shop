@@ -2228,6 +2228,230 @@ header nav .nav__main-menu--title a:hover {
 
 .product-page__content {
   background-color: #FFF;
-  height: 500px;
+  padding: 0px 20px;
   padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.product-page__content--main-img {
+  width: 100%;
+}
+
+.product-page__content--main-img-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.8;
+}
+
+.product-page__content--main-img-icon:after {
+  content: '\f00e';
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 45px;
+}
+
+.product-page__content--images img {
+  display: block;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.product-page__content--description {
+  padding: 0px 20px;
+  padding-top: 80px;
+  position: relative;
+}
+
+.product-page__content--description-add_favorits {
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  cursor: pointer;
+}
+
+.product-page__content--description-add_favorits:after {
+  content: url("../images/icons/favorits_black.svg");
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  display: block;
+}
+
+.product-page__content--description-title {
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.product-page__content--description-price {
+  font-size: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ff96ce;
+  margin-bottom: 10px;
+}
+
+.product-page__content--description-vendor {
+  font-size: 18px;
+}
+
+.product-page__content--description form {
+  padding-top: 20px;
+}
+
+.product-page__content--description form .color {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.product-page__content--description form .size {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+.product-page__content--description form .guide {
+  margin-left: 30px;
+  padding: 0px 10px;
+  line-height: 45px;
+  color: #000;
+  font-size: 18px;
+}
+
+.product-page__content--description form .guide:hover {
+  color: #fff;
+  padding-left: 15px;
+  background-color: #ff96ce;
+}
+
+.product-page__content--description form .add {
+  margin-top: 40px;
+  width: 100%;
+  border: none;
+  padding: 10px 0px;
+  color: #000;
+  background-color: #ff96ce;
+  font-size: 18px;
+  font-family: "Avenir Next Cyr";
+  letter-spacing: 1px;
+  cursor: pointer;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.product-page__content--description form .add:hover {
+  background-color: #fc53ad;
+  color: #fff;
+}
+
+.product-page__content--description form .dropcontainer {
+  top: 0px;
+  position: relative;
+  z-index: 9999;
+}
+
+.product-page__content--description form .dropcontainer ul {
+  text-align: left;
+  font-size: 16px;
+  -webkit-box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1);
+  border-top: none;
+  background: #fff;
+  list-style-type: none;
+  margin: 0;
+  -webkit-border-radius: 0px 0px 3px 3px;
+     -moz-border-radius: 0px 0px 3px 3px;
+          border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product-page__content--description form .dropcontainer ul li {
+  font-size: 14px;
+  padding: 10px 15px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.product-page__content--description form .dropcontainer ul li:hover {
+  background: #ff96ce;
+  outline: none;
+}
+
+.product-page__content--description form .dropcontainer ul li:hover a {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.product-page__content--description form .dropcontainer ul li:last-child {
+  border-bottom: none;
+}
+
+.product-page__content--description form .dropcontainer ul li a {
+  color: #474c4f;
+}
+
+.product-page__content--description form .trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+}
+
+.product-page__content--description form .trigger:hover {
+  background-color: #ff96ce;
+  color: #fff;
+}
+
+.product-page__content--description form .trigger:after {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  content: url("../images/icons/select.svg");
+}
+
+.product-page__content--description form .activetrigger {
+  border: 1px solid #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  background-color: #ff96ce;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.product-page__content--description form .activetrigger:after {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  content: url("../images/icons/select.svg");
+}
+
+.product-page__content--description form .dropdownhidden {
+  display: none;
+}
+
+.product-page__content--description form .dropdownvisible {
+  height: auto;
 }
