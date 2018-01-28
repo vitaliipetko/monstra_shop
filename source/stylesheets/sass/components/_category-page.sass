@@ -15,7 +15,6 @@
 			cursor: default
 	&__content
 		background-color: $second
-		padding-top: 35px
 		padding-bottom: 20px
 		$gutter : 4px
 		.container-fluid
@@ -33,6 +32,101 @@
 							padding: $gutter/2
 							min-height: 1px
 							position: relative
+		&--filter
+			padding-top: 35px
+			padding-bottom: 35px
+			max-width: 600px
+			margin: 0 auto
+			select
+				background-color: transparent
+				border: none
+				font-size: 18px
+				padding: 0px 10px
+				padding-right: 25px
+			label
+				position: relative
+				width: 33.3%
+				float: left
+				padding: 0px 30px
+				&:after
+					content: '|'
+					position: absolute
+					right: 0
+					top: 3px
+				&:last-child
+					&:after
+						content: ''
+				.dropcontainer
+					top: 0px
+					position: relative
+					z-index: 9999
+					ul
+						text-align: left
+						font-size: 16px
+						box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1); 
+						border-top: none
+						background: #fff
+						list-style-type: none
+						margin: 0
+						border-radius: 0px 0px 3px 3px
+						position: absolute
+						width: 100%
+						top: 0
+						z-index: 100
+						box-sizing: border-box
+						li
+							font-size: 14px
+							padding: 10px 15px
+							color: 
+							transition: all 0.4s
+							cursor: pointer
+							&:hover
+								background: $main
+								outline: none
+								a
+									color: #fff
+									padding-left: 10px
+							&:last-child
+								border-bottom: none
+							a
+								color: #474c4f
+				.trigger
+				   position: relative
+				   display: block
+				   width: 100%
+				   font-size: 18px
+				   color: #000
+				   background-color: transparent
+				   cursor: pointer
+				   outline: none
+				   padding: 5px 10px
+				   &:hover
+				   	background-color: $main
+				   	color: #fff
+				   &:after
+				   	position: absolute
+				   	right: 12px
+				   	top: 5px
+				   	content: url('../images/icons/select.svg')
+				.activetrigger
+					position: relative
+					display: block
+					width: 100%
+					font-size: 18px
+					background-color: $main
+					color: #fff
+					cursor: pointer
+					padding: 5px 10px
+					outline: none
+					&:after
+						position: absolute
+						right: 12px
+						top: 5px
+						content: url('../images/icons/select.svg')
+				.dropdownhidden
+				   display: none
+				.dropdownvisible
+				   height: auto
 		&--item
 			position: relative
 			overflow: hidden
