@@ -1,0 +1,126 @@
+.category-page
+	&__title
+		background: url('../images/content/category-bcg.jpg') no-repeat center center
+		background-size: cover
+		padding-top: 12%
+		text-align: center
+		&--text
+			padding-top: 20px
+			color: #fff
+			text-transform: uppercase
+			font-size: 120px
+			font-family: $bold
+			line-height: 1.2
+			padding-bottom: 12%
+			cursor: default
+	&__content
+		background-color: $second
+		padding-top: 35px
+		padding-bottom: 20px
+		$gutter : 4px
+		.container-fluid
+			padding: 0px $gutter/2
+			.row
+				margin: 0px $gutter/2*(-1)
+			@each $slug, $size in $breakpoints
+				@media (max-width: #{$size})
+					.hidden-#{$slug}
+						display: none
+					@for $i from 1 through $grid-size
+						.col-#{$slug}-#{$i}
+							width:  ( $i /$grid-size ) *100%
+							float: $float
+							padding: $gutter/2
+							min-height: 1px
+							position: relative
+		&--item
+			position: relative
+			overflow: hidden
+			+transition(all 0.4s)
+			&-title
+				background-color: rgba($second, .7)
+				position: absolute
+				z-index: 999
+				bottom: 0px
+				padding-bottom: 20px
+				padding-top: 20px
+				left: 0
+				font-size: 24px
+				+translate(0,100%)
+				right: 0
+				text-align: center
+				line-height: 1.2
+				color: #000
+				+transition(all 0.4s)
+				span
+					display: block
+				a
+					color: #000
+					text-transform: uppercase
+					padding: 0px 30px
+					&:hover
+						color: #fff
+						padding-left: 40px
+						background-color: $main
+			&:hover
+				.category-page__content--item-title
+					+translate(0,0)
+				.hidde
+					opacity: 1
+			.hidde
+				position: absolute
+				opacity: 0
+				top: 0
+				z-index: 99
+				+transition(all 0.4s)
+			&-add_favorits
+				position: absolute
+				right: 20px
+				top: 20px
+				cursor: pointer
+				z-index: 999
+				&:hover
+					&:after
+						content: url('../images/icons/favorits_black2.svg')
+				&:after
+					+transition(all 0.4s)
+					display: block
+					content: url('../images/icons/favorits_black.svg')
+			img
+				width: 100%
+				height: auto
+				max-width: none
+				display: block
+		&--more
+			padding-top: 35px
+			padding-bottom: 35px
+			text-align: center
+			a
+				display: inline-block
+				text-transform: uppercase
+				font-size: 18px
+				font-family: $medium
+				color: #fff
+				background-color: $main
+				border-radius: 10px
+				padding: 15px 70px
+				&:hover
+					background-color: $hover
+		&--info
+			background-color: #FFF
+			text-align: center
+			padding-top: 35px
+			padding-bottom: 35px
+			.container
+				max-width: 480px
+			a
+				display: block
+				font-size: 30px
+				text-transform: uppercase
+				letter-spacing: 1px
+				line-height: 1.2
+				color: #000
+				&:hover
+					color: #fff
+					padding-left: 20px
+					background-color: $main
