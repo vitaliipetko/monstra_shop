@@ -63,7 +63,9 @@
 @each $slug, $size in $breakpoints
 	@media (max-width: #{$size})
 		.hidden-#{$slug}
-			display: none
+			display: none !important
+		.#{$slug}-center
+			text-align: center !important
 		@for $i from 1 through $grid-size
 			.col-#{$slug}-#{$i}
 				width:  ( $i /$grid-size ) *100%
