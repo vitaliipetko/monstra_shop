@@ -1,23 +1,30 @@
 header
 	.container
 		.row
-			.col-lg-6.col-sm-8.col-xs-12.header__left
-				ul.nav__lang.hidden-sm English
-					li 
-						a(href="#") Russian
+			.col-lg-6.col-sm-12.col-xs-12.header__left
+				span.nav__lang English
+					ul.nav__lang--menu 
+						li 
+							a(href="#") Russian
+						li 
+							a(href="#") English
 				a.nav__phone(href="tel:+380955350103") +38(095) 535 01 03
 				a.nav__instagram(href="#")
 					img(src="assets/images/icons/instagram.svg" alt="")
 				a.nav__fb(href="#")
 					img(src="assets/images/icons/fb.svg" alt="")
-			.col-lg-6.col-sm-4.col-xs-12.text-right.header__right
+			.col-lg-6.col-sm-12.col-xs-12.text-right.header__right
 				a.nav__cabinet(href="#")
 					img(src="assets/images/icons/login.svg", alt="")
 				a.nav__favorits(href="#")
 					img(src="assets/images/icons/favorits.svg", alt="")
+					.wishlist
+						span 1
 				a.nav__cart(href="#")
 					img(src="assets/images/icons/cart.svg", alt="")
-				form.nav__search.hidden-sm(action="#")
+					.cart
+						span 1
+				form.nav__search(action="#")
 					input(type="text" placeholder="Search" name="s")
 					input.nav__search--btn(type="submit" value="")
 		.row.text-center
@@ -105,6 +112,17 @@ header
 							a.nav__main-menu--item-link(href="#") about brend
 						li.nav__main-menu--item 
 							a.nav__main-menu--item-link(href="#") contacts
+					.nav__main-menu--icons.text-center
+						a.nav__cabinet(href="#")
+							img(src="assets/images/icons/login.svg", alt="")
+						a.nav__favorits(href="#")
+							img(src="assets/images/icons/favorits.svg", alt="")
+							.wishlist
+								span 1
+						a.nav__cart(href="#")
+							img(src="assets/images/icons/cart.svg", alt="")
+							.cart
+								span 1
 					i.nav__main-menu--mobile-btn
 					ul.nav__main-menu--mobile
 						span.close

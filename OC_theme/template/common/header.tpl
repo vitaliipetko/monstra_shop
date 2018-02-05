@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
   <head>
     <meta charset="utf-8">
-    <title>Monstra Shop - Main page</title>
+    <title<?php echo $title; ?></title>
+    <base href="<?php echo $base; ?>" />
     <meta name="author" content="Vitalii Petko">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta name="description" content="Awesome site">
+    <?php if ($description) { ?>
+    <meta name="description" content="<?php echo $description; ?>" />
+    <?php } ?>
+    <?php if ($keywords) { ?>
+    <meta name="keywords" content= "<?php echo $keywords; ?>" />
+    <?php } ?>
     <link rel="stylesheet" type="text/css" href="/catalog/view/theme/monstra/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/catalog/view/theme/monstra/assets/css/main.min.css">
+    <?php foreach ($analytics as $analytic) { ?>
+    <?php echo $analytic; ?>
+    <?php } ?>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-sm-8 col-xs-12 header__left">
-            <ul class="nav__lang hidden-sm">English
-              <li> <a href="#">Russian</a></li>
-            </ul><a class="nav__phone" href="tel:+380955350103">+38(095) 535 01 03</a><a class="nav__instagram" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/instagram.svg" alt=""></a><a class="nav__fb" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/fb.svg" alt=""></a>
+          <div class="col-lg-6 col-sm-12 col-xs-12 header__left">
+            <?php echo $language; ?>
+            <a class="nav__phone" href="tel:+380955350103">+38(095) 535 01 03</a><a class="nav__instagram" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/instagram.svg" alt=""></a><a class="nav__fb" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/fb.svg" alt=""></a>
           </div>
-          <div class="col-lg-6 col-sm-4 col-xs-12 text-right header__right"><a class="nav__cabinet" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/login.svg" alt=""></a><a class="nav__favorits" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/favorits.svg" alt=""></a><a class="nav__cart" href="#"><img src="/catalog/view/theme/monstra/assets/images/icons/cart.svg" alt=""></a>
-            <form class="nav__search hidden-sm" action="#">
-              <input type="text" placeholder="Search" name="s">
-              <input class="nav__search--btn" type="submit" value="">
-            </form>
+          <div class="col-lg-6 col-sm-12 col-xs-12 text-right header__right">
+            <a class="nav__cabinet" href="/index.php?route=account/account">
+              <img src="/catalog/view/theme/monstra/assets/images/icons/login.svg" alt="">
+            </a>
+            <a class="nav__favorits" href="/index.php?route=account/wishlist">
+              <img src="/catalog/view/theme/monstra/assets/images/icons/favorits.svg" alt="">
+              <div class="wishlist">
+                <span><?php echo $text_wishlist; ?></span>
+              </div>
+            </a>
+            <a class="nav__cart" href="/index.php?route=checkout/cart">
+              <img src="/catalog/view/theme/monstra/assets/images/icons/cart.svg" alt="">
+              <div class="cart">
+                <?php echo $cart; ?>
+              </div>
+            </a>
+            <?php echo $search; ?>
           </div>
         </div>
         <div class="row text-center"><a href="/"><img class="nav__logo" src="/catalog/view/theme/monstra/assets/images/icons/logo.svg" alt=""></a></div>
@@ -99,7 +119,25 @@
                 <li class="nav__main-menu--item"> <a class="nav__main-menu--item-link" href="/blog">blog</a></li>
                 <li class="nav__main-menu--item"> <a class="nav__main-menu--item-link" href="/about-brend">about brend</a></li>
                 <li class="nav__main-menu--item"> <a class="nav__main-menu--item-link" href="/contacts">contacts</a></li>
-              </ul><i class="nav__main-menu--mobile-btn"></i>
+              </ul>
+              <div class="nav__main-menu--icons text-center">
+                <a class="nav__cabinet" href="/index.php?route=account/account">
+                  <img src="/catalog/view/theme/monstra/assets/images/icons/login.svg" alt="">
+                </a>
+                <a class="nav__favorits" href="/index.php?route=account/wishlist">
+                  <img src="/catalog/view/theme/monstra/assets/images/icons/favorits.svg" alt="">
+                  <div class="wishlist">
+                    <span><?php echo $text_wishlist; ?></span>
+                  </div>
+                </a>
+                <a class="nav__cart" href="/index.php?route=checkout/cart">
+                  <img src="/catalog/view/theme/monstra/assets/images/icons/cart.svg" alt="">
+                  <div class="cart">
+                    <?php echo $cart; ?>
+                  </div>
+                </a>
+              </div>
+              <i class="nav__main-menu--mobile-btn"></i>
               <ul class="nav__main-menu--mobile"><span class="close"></span>
                 <li> <a href="/runway">runway</a>
                   <ul>

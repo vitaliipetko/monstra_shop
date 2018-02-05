@@ -14,7 +14,7 @@ header
 		top: 0
 		left: 0
 		right: 0
-		z-index: 999
+		z-index: 9999
 		+transition(all .6s)
 		&.scroll
 			+translate(0,-100%)
@@ -47,22 +47,17 @@ header
 				display: block
 				right: -10px
 				top: 0
-			&:hover
-				&:after
-					top: 0
-				& li
-					display: block
-					background-color: #FFF
-			li
+			&--menu
 				display: none
 				position: absolute
-				padding: 5px 10px 7px
+				background: #fff
 				z-index: 10
-				left: 0
-				&:hover
+				left: 0px
+				li
+					padding: 5px 10px 7px
 					display: block
-				a
-					color: $main
+					a
+						color: $main
 		&__phone
 			color: #fff
 			position: relative
@@ -103,6 +98,21 @@ header
 			position: relative
 			top: 5px
 			margin-left: 15px
+			.wishlist
+				position: absolute
+				top: -2px
+				right: -6px
+				border-radius: 50%
+				background: #73dff6
+				width: 12px
+				height: 12px
+				text-align: center	
+				span
+					display: block
+					position: relative
+					top: -4px
+					font-size: 7px
+					color: #fff
 			&:hover
 				top: 0
 		&__cart
@@ -110,6 +120,21 @@ header
 			position: relative
 			top: 5px
 			margin-left: 15px
+			.cart
+				position: absolute
+				top: -2px
+				right: -6px
+				border-radius: 50%
+				background: #73dff6
+				width: 12px
+				height: 12px
+				text-align: center	
+				span
+					display: block
+					position: relative
+					top: -4px
+					font-size: 7px
+					color: #fff
 			&:hover
 				top: 0
 		&__search
@@ -154,6 +179,8 @@ header
 			text-align: center
 			z-index: 999
 			position: relative
+			&--icons
+				display: none
 			&--item
 				display: inline-block
 				padding: 0px 28px
@@ -174,6 +201,7 @@ header
 					.box-col-1,.box-col-2
 						display: block
 				.box-col-1,.box-col-2
+					box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1);
 					cursor: default
 					text-align: left
 					display: none
@@ -294,11 +322,21 @@ header
 				padding-top: 20px
 @media screen and (max-width: 768px)
 	header
+		.header
+			&__left
+				text-align: center
+				padding-bottom: 10px
+			&__right
+				text-align: center
+				a
+					display: none
 		nav
 			min-height: 47px
 			.nav
 				&__main-menu
 					display: none
+					&--icons
+						display: block
 					&--mobile
 						&-btn
 							display: block
