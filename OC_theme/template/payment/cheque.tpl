@@ -18,10 +18,8 @@ $('#button-confirm').on('click', function() {
 		url: 'index.php?route=payment/cheque/confirm',
 		cache: false,
 		beforeSend: function() {
-			$('#button-confirm').button('loading');
 		},
 		complete: function() {
-			$('#button-confirm').button('reset');
 		},
 		success: function() {
 			location = '<?php echo $continue; ?>';

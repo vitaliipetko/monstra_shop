@@ -1,0 +1,49 @@
+.pay
+	&__top
+		img
+			width: 100%
+			display: block
+	&__content
+		padding: 20px 0px
+		background: $second
+		.container
+			max-width: 1024px
+		&--box
+			background: url(../images/content/menu_bcg.png) no-repeat top right #fff
+			padding: 40px 30px
+			.atention
+				position: relative
+				line-height: 1.5
+				padding-left: 30px
+				strong
+					font-family: $bold
+					color: red
+					&:before
+						content: url('/image/catalog/Banner/icon/info.png')
+						position: absolute
+						top: 0px
+						left: 0
+						margin-right: 10px
+			.title
+				font-size: 24px
+				font-family: $bold
+				padding-top: 40px
+				&-second
+					font-size: 18px
+					font-family: $bold
+					padding-bottom: 10px
+					padding-top: 20px
+			.litle
+				font-size: 14px
+				opacity: .5
+				padding-bottom: 10px
+			.card:before
+				margin-right: 10px
+				position: relative
+				top: 2px
+				content: url('/image/catalog/Banner/icon/credit-card.png')
+			.cash:before
+				margin-right: 10px
+				position: relative
+				top: 2px
+				content: url('/image/catalog/Banner/icon/wallet.png')

@@ -1,0 +1,123 @@
+.cart-page
+	background: $second
+	padding-top: 20px
+	padding-bottom: 30px
+	.container
+		background: #fff
+		padding-bottom: 20px
+	.text-danger
+		color: red
+		font-size: 14px
+	.alert
+		padding: 10px
+		margin: 30px 20px
+		margin-top: 0px
+		i
+			font-size: 12px
+		button
+			border: none
+			background: transparent
+			cursor: pointer
+			outline: none
+		&-success
+			color: green
+			border: 1px solid green
+			i:before
+				color: green
+			button
+				color: green
+		&-danger
+			color: red
+			border: 1px solid red
+			i:before
+				color: red
+			button
+				color: red
+	&__title
+		font-size: 32px
+		line-height: 1.5
+		letter-spacing: 1px
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 20px
+	&__btn
+		padding-top: 10px
+		text-align: right
+	&__total
+		font-size: 24px
+		text-transform: uppercase
+		padding-bottom: 10px
+		line-height: 1.2
+	&__apply
+		font-size: 18px
+		text-transform: uppercase
+		color: #fff
+		letter-spacing: 1px
+		background: $main
+		padding: 10px 30px
+		display: inline-block
+		border: 1px solid transparent
+		&:hover
+			border-color: $main
+			background: $hover
+	&__item
+		padding-bottom: 20px
+		margin-bottom: 20px
+		border-bottom: 2px solid $second
+		input
+			margin-top: 10px
+			padding: 5px 10px
+			width: 50px
+			margin-bottom: 10px
+			border: 1px solid $second
+		img
+			max-width: 150px
+			margin: 0 auto
+			display: block
+		button
+			background: $main
+			border: none
+			padding: 5px 10px
+			outline: none
+			cursor: pointer
+			+transition(all .4s)
+			&:hover
+				background: $hover
+			i
+				&:after
+					font-family: $ff
+					color: #fff
+		.fresh
+			&:after
+				content: "\f021"
+		.del
+			&:after
+				content: "\f057"
+		&--title
+			padding-bottom: 10px
+			a
+				font-size: 20px
+				font-family: $bold
+				letter-spacing: 1px
+				padding-bottom: 10px
+				color: #000
+		&--price
+			font-size: 18px
+			padding-bottom: 10px
+			letter-spacing: 1px
+		&--code
+			font-size: 14px
+			opacity: .7
+			letter-spacing: 1px
+		&--option
+			font-size: 14px
+			opacity: .7
+			letter-spacing: 1px
+@media screen and (max-width: 480px)
+	.cart-page
+		&__item
+			text-align: center
+			img
+				margin-bottom: 20px
+				max-width: 100%
+				width: 100%

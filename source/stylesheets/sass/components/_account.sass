@@ -1,0 +1,146 @@
+.account
+	background: $second
+	padding: 20px 0px
+	.container
+		max-width: 768px
+	&__content
+		padding: 30px
+		background: url(../images/content/menu_bcg.png) no-repeat top right #fff
+		min-height: 350px
+		.bottom_panel
+			padding-top: 30px
+		.breadcrumb
+			padding-bottom: 20px
+			li
+				display: inline
+				font-size: 18px
+				&:after
+					content: '/'
+					padding-left: 5px
+					color: $main
+				&:last-child
+					&:after
+						content: ''
+					a
+						color: #000
+				a
+					color: $main
+		.table
+			width: 100%
+			margin-bottom: 10px
+			tr
+				border: 1px solid $main
+			td 
+				padding: 10px
+		.panel-heading
+			font-size: 18px
+		.ulogin_panel
+			text-align: center
+		&--title
+			font-size: 32px
+			padding-bottom: 20px
+		.list-unstyled
+			font-size: 18px
+			padding-left: 10px
+			padding-bottom: 20px
+			li
+				padding: 5px 0px
+		a
+			color: #000
+			&:hover
+				color: $main
+		h2
+			padding-bottom: 10px
+			font-family: $bold
+		.form-group
+			float: left
+			width: 50%
+			padding: 0px 12px
+			padding-bottom: 10px
+			min-height: 102px
+		.text-danger
+			font-size: 12px
+			color: rgba(red, 0.8)
+		.alert
+			padding: 10px
+			margin-bottom: 20px
+			i
+				font-size: 12px
+			button
+				border: none
+				background: transparent
+				cursor: pointer
+				outline: none
+			&-success
+				color: green
+				border: 1px solid green
+				i:before
+					color: green
+				button
+					color: green
+			&-danger
+				color: red
+				border: 1px solid red
+				i:before
+					color: red
+				button
+					color: red
+			&-warning
+				color: red
+				border: 1px solid red
+				i:before
+					color: red
+				button
+					color: red
+		label
+			display: inline-block
+			cursor: pointer
+			padding-bottom: 10px
+		input,select,textarea
+			padding: 10px 15px
+			border: 1px solid $main
+			font-size: 14px
+			// color: $main
+			display: block
+			width: 100%
+		input[type=radio]
+			display: inline-block
+			padding: 0
+			border: 1px solid $main
+			height: 10px
+			width: 10px
+			border-radius: 50%
+			+transition(all .4s)
+			cursor: pointer
+			&:hover
+				border-color: $hover
+			&:checked
+				background: $main
+		input[type=checkbox]
+			width: 15px
+			height: 15px
+			display: inline-block
+			padding: 0
+			top: 5px
+			position: relative
+			&:checked
+				background: $main
+		input[type=submit]
+			background: $main
+			color: #fff
+			text-transform: uppercase
+			cursor: pointer
+			+transition(all .4s)
+			&:hover
+				background-color: $hover
+		.buttons
+			padding-top: 20px
+			&:after
+				content: ''
+				display: table
+				clear: both
+		legend
+			font-family: $bold
+			padding: 10px 0px
+		thead
+			font-family: $bold

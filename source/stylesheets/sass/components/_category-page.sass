@@ -32,101 +32,93 @@
 							padding: $gutter/2
 							min-height: 1px
 							position: relative
-		&--filter
+			.empty
+				padding: 20px
+				background: url(../images/content/menu_bcg.png) no-repeat top right #fff
+				min-height: 350px
+				// max-width: 768px
+				margin: 0 auto
+				h2
+					font-size: 24px
+					font-family: $regular
+					padding-top: 30px
+		&--filter,.search_form
 			padding-top: 35px
 			padding-bottom: 35px
-			max-width: 600px
 			margin: 0 auto
-			select
-				background-color: transparent
-				border: none
-				font-size: 18px
-				padding: 0px 10px
-				padding-right: 25px
-			label
+			max-width: 480px
+			h2
+				font-size: 30px
+				font-family: $regular
+				padding-bottom: 30px
+			.form
+				padding: 20px
+				border: 1px solid $main
+			form
+				margin: 0 -10
+				+clearfix
 				position: relative
-				width: 33.3%
+			.option_name
+				font-size: 14px
+				opacity: .5
+				padding-bottom: 5px
+				text-align: center
+				display: none
+			.option_box
 				float: left
-				padding: 0px 30px
-				&:after
-					content: '|'
-					position: absolute
-					right: 0
-					top: 3px
-				&:last-child
-					&:after
-						content: ''
-				.dropcontainer
-					top: 0px
-					position: relative
-					z-index: 9999
-					ul
-						text-align: left
-						font-size: 16px
-						box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1); 
-						border-top: none
-						background: #fff
-						list-style-type: none
-						margin: 0
-						border-radius: 0px 0px 3px 3px
-						position: absolute
-						width: 100%
-						top: 0
-						z-index: 100
-						box-sizing: border-box
-						li
-							font-size: 14px
-							padding: 10px 15px
-							color: 
-							transition: all 0.4s
-							cursor: pointer
-							&:hover
-								background: $main
-								outline: none
-								a
-									color: #fff
-									padding-left: 10px
-							&:last-child
-								border-bottom: none
-							a
-								color: #474c4f
-				.trigger
-				   position: relative
-				   display: block
-				   width: 100%
-				   font-size: 18px
-				   color: #000
-				   background-color: transparent
-				   cursor: pointer
-				   outline: none
-				   padding: 5px 10px
-				   &:hover
-				   	background-color: $main
-				   	color: #fff
-				   &:after
-				   	position: absolute
-				   	right: 12px
-				   	top: 5px
-				   	content: url('../images/icons/select.svg')
-				.activetrigger
-					position: relative
-					display: block
-					width: 100%
-					font-size: 18px
-					background-color: $main
+				width: 33.3%
+				display: block
+				padding: 0px 10px
+			input,select,textarea,.button
+				padding: 10px 15px
+				border: 1px solid $main
+				font-size: 14px
+				color: $main
+				display: block
+				width: 100%
+			.clear_filter
+				display: none
+				.button
+					text-align: center
+					padding: 7px 7px
+					width: 35px
 					color: #fff
+					background: $main
+					+transition(all .4s)
 					cursor: pointer
-					padding: 5px 10px
-					outline: none
-					&:after
-						position: absolute
-						right: 12px
-						top: 5px
-						content: url('../images/icons/select.svg')
-				.dropdownhidden
-				   display: none
-				.dropdownvisible
-				   height: auto
+					&:hover
+						background: $hover
+			input[type=radio]
+				display: inline-block
+				padding: 0
+				border: 1px solid $main
+				height: 10px
+				width: 10px
+				border-radius: 50%
+				+transition(all .4s)
+				cursor: pointer
+				&:hover
+					border-color: $hover
+				&:checked
+					background: $main
+			input[type=checkbox]
+				width: 15px
+				height: 15px
+				display: inline-block
+				padding: 0
+				top: 5px
+				position: relative
+				&:checked
+					background: $main
+			input:disabled
+				border: 1px solid $gray
+				background: transparent !important
+			.button
+				background: $main
+				color: #fff
+				text-transform: uppercase
+		.search_form
+			max-width: 100%
 		&--item
 			position: relative
 			overflow: hidden
@@ -148,14 +140,14 @@
 				+transition(all 0.4s)
 				span
 					display: block
-				a
-					color: #000
-					text-transform: uppercase
-					padding: 0px 30px
-					&:hover
-						color: #fff
-						padding-left: 40px
-						background-color: $main
+			&-link
+				color: #000
+				text-transform: uppercase
+				padding: 0px 30px
+				&:hover
+					color: #fff
+					padding-left: 40px
+					background-color: $main
 			&:hover
 				.category-page__content--item-title
 					+translate(0,0)
@@ -203,6 +195,7 @@
 		&--info
 			background-color: #FFF
 			text-align: center
+			margin-top: 20px
 			padding-top: 35px
 			padding-bottom: 35px
 			.container
@@ -218,3 +211,45 @@
 					color: #fff
 					padding-left: 20px
 					background-color: $main
+.pagination
+	padding: 40px 0px
+	padding-bottom: 20px
+	text-align: center
+	font-size: 16px
+	li
+		display: inline-block
+		a,span
+			background-color: $main
+			display: inline-block
+			margin: 0px 5px
+			padding: 10px 15px
+			color: #fff
+			&:hover
+				background-color: $hover
+	.active
+		span
+			background: #fff
+			color: $main
+			&:hover
+				background-color: #fff
+@media screen and (max-width: 1024px)
+	.category-page
+		&__content
+			&--item
+				&-title
+					+translate(0,0)
+@media screen and (max-width: 768px)
+	.category-page
+		&__title
+			&--text
+				font-size: 50px
+@media screen and (max-width: 480px)
+	.category-page
+		&__content
+			&--filter
+				.option_box
+					width: 100%
+					padding-bottom: 10px
+				select
+					width: 100%
+					text-align: center

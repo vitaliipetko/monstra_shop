@@ -1,4 +1,4 @@
-<form>
+<!-- <form>
   <div class="row">
     <?php foreach ($filter_groups as $filter_group) { ?>
     <label>
@@ -19,8 +19,8 @@
     </label>
     <?php } ?>
   </div>
-</form>
-<!-- <div class="panel panel-default">
+</form> -->
+<div class="panel panel-default">
   <div class="panel-heading"><?php echo $heading_title; ?></div>
   <div class="list-group">
     <?php foreach ($filter_groups as $filter_group) { ?>
@@ -58,4 +58,4 @@ $('#button-filter').on('click', function() {
 
 	location = '<?php echo $action; ?>&filter=' + filter.join(',');
 });
-</script> -->
+</script>

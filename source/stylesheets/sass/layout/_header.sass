@@ -91,8 +91,28 @@ header
 			display: inline-block
 			position: relative
 			top: 5px
+			+transition(all .4s)
 			&:hover
 				top: 0
+				.nav__cabinet--menu
+					opacity: 1
+					visibility: visible
+			&--menu
+				+transition(all .4s)
+				opacity: 0
+				visibility: hidden
+				position: absolute
+				background: #fff
+				padding: 10px
+				text-align: center
+				top: 30px
+				min-width: 170px
+				left: 50%
+				+translate(-50%,0%)
+				z-index: 999
+				box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1)
+				a
+					color: $main
 		&__favorits
 			display: inline-block
 			position: relative
@@ -191,32 +211,19 @@ header
 				cursor: pointer
 				padding-bottom: 15px
 				transition: all .4s
-				&-link
-					color: #fff
-				&:hover
-					.nav__main-menu--item-link 
-						color: $hover
-					color: $hover
-					background-color: #FFF
-					.box-col-1,.box-col-2
-						display: block
-				.box-col-1,.box-col-2
-					box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1);
-					cursor: default
+				.box,.box2
 					text-align: left
-					display: none
-					width: 500px
+					padding: 0px 20px
 					left: 50%
-					transform: translate(-50%)
-					top: 37px
+					top: 35px
+					background: #fff
 					position: absolute
-					padding: 20px 20px
+					min-width: 300px
+					+translate(-50%,0%)
 					background: url('../images/content/menu_bcg.png') no-repeat top right #fff
-					background-size: cover
-					&:after
-						content: ''
-						display: table
-						clear: both
+					display: none
+					+transition(all .4s)
+					box-shadow: 0px 9px 49px 0px rgba(0, 0, 0, 0.1); 
 					ul
 						margin-bottom: 20px
 						li
@@ -224,29 +231,46 @@ header
 							padding: 0px 10px
 							padding-top: 5px
 							transition: all .4s
-							&:hover
-								background-color: $main
+							a
+								&:hover
+									background-color: $main
 							&:first-child
 								margin-top: 10px
 						a
 							color: #000
-							font-family: $regular
+							font-family: $bold
 							text-transform: none
 							display: block
 							&:hover
 								padding-left: 10px
 								color: #fff
-				.box-col-1
-					width: 250px
+				.box2
+					width: 500px
+					padding: 20px
 					ul
-						margin-bottom: 0
 						li
-							a
-								font-family: $medium
-								font-size: 18px
-								text-transform: uppercase
+							float: left
+							width: 50%
 							&:first-child
 								margin: 0
+							ul
+								li
+									width: 100%
+									a
+										font-family: $regular
+					&:after
+						content: ''
+						display: table
+						clear: both
+				&-link
+					color: #fff
+				&:hover
+					.nav__main-menu--item-link 
+						color: $hover
+					color: $hover
+					background-color: #FFF
+					.box,.box2
+						display: block
 			&--title
 				color: #000
 				font-family: $medium
@@ -320,6 +344,14 @@ header
 			&__logo
 				top: 0
 				padding-top: 20px
+		nav
+			min-height: 47px
+			.nav
+				&__main-menu
+					display: none
+					&--mobile
+						&-btn
+							display: block
 @media screen and (max-width: 768px)
 	header
 		.header
@@ -328,8 +360,13 @@ header
 				padding-bottom: 10px
 			&__right
 				text-align: center
-				a
+				a,span
 					display: none
+		.nav
+				&__phone
+					display: none
+				&__lang
+					margin-right: 10px
 		nav
 			min-height: 47px
 			.nav

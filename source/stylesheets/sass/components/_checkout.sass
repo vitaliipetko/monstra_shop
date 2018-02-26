@@ -1,0 +1,129 @@
+.checkout
+	background: $second
+	padding: 20px 0px
+	&__title
+		font-size: 24px
+		padding-bottom: 30px
+	#content
+		background: #fff
+		max-width: 768px
+		margin: 0 auto
+		padding: 20px
+	.panel
+		background: #fff
+		border: 1px solid $second
+		margin-bottom: 10px
+		&-body
+			display: none
+		&-heading
+			position: relative
+			margin-bottom: 0px
+			background: $main
+			padding: 10px
+			text-transform: uppercase
+			*
+				color: #fff
+				display: block
+			span
+				cursor: pointer
+			i:before
+				position: absolute
+				right: 15px
+				top: 15px
+		form
+			padding: 20px
+	input,select,textarea
+		padding: 10px 15px
+		border: 1px solid $main
+		font-size: 14px
+		color: $main
+		display: block
+		width: 100%
+	input[type=radio]
+		display: inline-block
+		padding: 0
+		border: 1px solid $main
+		height: 10px
+		width: 10px
+		border-radius: 50%
+		+transition(all .4s)
+		cursor: pointer
+		&:hover
+			border-color: $hover
+		&:checked
+			background: $main
+	input[type=checkbox]
+		width: 15px
+		height: 15px
+		display: inline-block
+		padding: 0
+		top: 5px
+		position: relative
+		&:checked
+			background: $main
+	.ulogin_form
+		margin: 0
+	input[type=button],input[type=submit]
+		background: $main
+		color: #fff
+		text-transform: uppercase
+		cursor: pointer
+		+transition(all .4s)
+		&:hover
+			background-color: $hover
+	label
+		display: inline-block
+		cursor: pointer
+	#liqpay
+		padding: 0
+	.form-group
+		width: 50%
+		float: left
+		padding: 0px 12px
+		padding-bottom: 10px
+	.text-danger
+		font-size: 12px
+		color: rgba(red, 0.8)
+	#payment-existing,#shipping-existing
+		margin-left: 20px
+		padding: 15px 0px
+	.buttons
+		padding-top: 20px
+		&:after
+			content: ''
+			display: table
+			clear: both
+	.content-box
+		padding: 20px
+		&__title
+			padding-bottom: 10px
+			font-size: 16px
+			font-family: $medium
+			&--second
+				padding-bottom: 10px
+				padding-top: 10px
+				font-size: 16px
+		table
+			width: 100%
+			thead
+				border-bottom: 2px solid $second
+				margin-bottom: 10px
+				font-family: $bold
+			tbody
+				td
+					border-bottom: 1px solid $second
+					padding: 10px 0px
+				a
+					color: $main
+				small
+					font-size: 12px
+					opacity: .8
+			tfoot
+				font-family: $bold
+				td:first-childe
+					padding-top: 10px
+		.table-responsive
+			padding-bottom: 20px
+		h2
+			font-family: $bold
+			padding-bottom: 10px

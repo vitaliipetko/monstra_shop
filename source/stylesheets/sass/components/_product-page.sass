@@ -200,7 +200,34 @@
 			font-size: 18px
 			letter-spacing: 1px
 			max-width: 700px
-
+			ul
+				margin-top: 20px
+				margin-left: 20px
+				list-style: disc
+				li
+					font-size: 14px
+		&--attr
+			margin-top: 20px
+			border: 1px solid $main
+			thead
+				font-family: $medium
+			td
+				padding: 5px
+				width: 75%
+				&:first-child
+					width: 25%
+					font-family: $medium
+			tr
+				border-top: 1px solid $main
+		&--tags
+			padding-top: 20px
+			a
+				color: $main
+.related
+	&--title
+		text-align: center
+		font-size: 28px
+		padding-bottom: 30px
 @media screen and (max-width: 480px)
 	.product-page
 		&__modal
