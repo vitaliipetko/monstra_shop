@@ -2,7 +2,6 @@ $( document ).ready(function() {
 	//slider
 	$('.main-slider').slick({
 		dots: true,
-		adaptiveHeight: true,
 		autoplay: true,
 		appendDots: $('.main-slider-btn'),
 		touchThreshold: 12
@@ -71,6 +70,18 @@ $( document ).ready(function() {
 		$('#language__form').submit();
 	});
 
+	//cash
+	$('.nav__cash').click(function(event) {
+		$('.nav__cash--menu').slideToggle(400);
+	});
+
+	$('#currency a').on('click', function(e) {
+		e.preventDefault();
+
+		$('#currency__form input[name=\'code\']').attr('value', $(this).attr('href'));
+
+		$('#currency__form').submit();
+	});
 	//search
 	$('.nav__search--btn').on('click', function() {
 		url = $('base').attr('href') + 'index.php?route=product/search';

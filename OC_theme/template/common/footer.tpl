@@ -26,7 +26,7 @@
               <li><a href="<?php echo $contact; ?>"><?php echo $contacts ?></a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-sm-4 hidden-xs">
+          <div class="col-lg-3 col-sm-4 col-xs-12">
             <ul class="footer__nav">
               <li><a href="/index.php?route=account/login"><?php echo $text_account; ?></a></li>
               <li><a href="/index.php?route=checkout/cart"><?php echo $text_cart; ?></a></li>
@@ -38,7 +38,11 @@
           <div class="col-lg-3 hidden-sm">
             <div class="footer__stories">
               <p>stories from instagram</p>
-              <div class="row"><a class="footer__stories--link" href="#"><img src="/catalog/view/theme/monstra/assets/images/content/footer_stories.jpg" alt=""></a><a class="footer__stories--link" href="#"><img src="/catalog/view/theme/monstra/assets/images/content/footer_stories.jpg" alt=""></a><a class="footer__stories--link" href="#"><img src="/catalog/view/theme/monstra/assets/images/content/footer_stories.jpg" alt=""></a><a class="footer__stories--link" href="#"><img src="/catalog/view/theme/monstra/assets/images/content/footer_stories.jpg" alt=""></a></div>
+              <div class="row">
+                <?php foreach ($instagram['posts'] as $post) {?>
+                  <a class="footer__stories--link" href="<?php echo $post['link']?>" target="_blank" title="<?php echo $post['title']?>"><img src="<?php echo $post['img']; ?>" alt="<?php echo $post['title']?>"></a>
+                <?php } ?>
+              </div>
             </div>
           </div>
         </div>

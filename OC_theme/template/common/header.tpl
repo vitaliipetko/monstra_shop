@@ -37,6 +37,7 @@
         <div class="row">
           <div class="col-lg-6 col-sm-12 col-xs-12 header__left">
             <?php echo $language; ?>
+            <?php echo $currency; ?>
             <a class="nav__phone" href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a><a class="nav__instagram" href="https://www.instagram.com/monstra_official" target="_blank"><img src="/catalog/view/theme/monstra/assets/images/icons/instagram.svg" alt=""></a><a class="nav__fb" href="https://www.facebook.com/MONSTRAbrand/" target="_blank"><img src="/catalog/view/theme/monstra/assets/images/icons/fb.svg" alt=""></a>
           </div>
           <div class="col-lg-6 col-sm-12 col-xs-12 text-right header__right">

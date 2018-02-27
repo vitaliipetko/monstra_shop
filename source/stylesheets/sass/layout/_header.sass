@@ -40,6 +40,36 @@ header
 			padding-bottom: 20px
 			top: 0
 			transition: all .4s
+			z-index: 999
+			&:after
+				font-family: $ff
+				content: '\f107'
+				position: absolute
+				display: block
+				right: -10px
+				top: 0
+			&--menu
+				display: none
+				position: absolute
+				background: #fff
+				left: 0px
+				li
+					padding: 5px 10px 7px
+					display: block
+					a
+						color: $main
+		&__cash
+			position: relative
+			color: #fff
+			letter-spacing: 0.7px
+			position: relative
+			display: inline
+			cursor: pointer
+			margin-right: 30px
+			padding-bottom: 20px
+			top: 0
+			transition: all .4s
+			z-index: 9999
 			&:after
 				font-family: $ff
 				content: '\f107'
@@ -191,7 +221,7 @@ header
 		&__logo
 			max-width: 320px
 			position: relative
-			top: -8px
+			padding-top: 20px
 			margin-bottom: 14px
 	nav
 		padding-top: 10px
@@ -340,10 +370,6 @@ header
 
 @media screen and (max-width: 1024px)
 	header
-		.nav
-			&__logo
-				top: 0
-				padding-top: 20px
 		nav
 			min-height: 47px
 			.nav
@@ -366,7 +392,11 @@ header
 				&__phone
 					display: none
 				&__lang
-					margin-right: 10px
+					margin-right: 20px
+				&__cash
+					margin-right: 20px
+				&__instagram
+					margin-left: 0px
 		nav
 			min-height: 47px
 			.nav

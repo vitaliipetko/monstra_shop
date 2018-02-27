@@ -7,7 +7,7 @@
         <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
         <?php } ?>
       </ul>
-        <div id="content" class="text-center"><?php echo $content_top; ?>
+        <div id="content" class="text-center">
           <h2><?php echo $heading_title; ?></h2>
           <p><?php echo $text_error; ?></p>
           <div class="buttons">

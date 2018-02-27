@@ -40,6 +40,10 @@
               <?php } ?>
               </div>
               <a class="guide" href="/size"><?php echo $text_size; ?></a>
+              <!-- AddThis Button BEGIN -->
+              <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
+              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+              <!-- AddThis Button END -->
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input class="add" type="button" value="<?php echo $text_add; ?>" data-btn="<?php echo $text_add; ?>">
