@@ -4,7 +4,7 @@
     <?php if ($products) { ?>
     <section class="category-page">
       <?php if ($thumb) {?>
-      <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt="">
+      <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><!-- <img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt=""> -->
         <p class="category-page__title--text"><?php echo $heading_title; ?></p>
       </div>
       <?php } ?>
@@ -14,31 +14,22 @@
             <?php echo $content_top; ?>
           </div>
           <div class="items">
-            <?php $i = 0; ?>
-            <?php foreach ($products as $product) { ?>
-            <?php if ($i==0) { ?>
             <div class="row">
-            <?php } ?>
-            <div class="product-layout col-lg-4 col-sm-4 col-xs-12">
-              <div class="category-page__content--item">
-                <span class="category-page__content--item-add_favorits" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></span>
-                <a href="<?php echo $product['href']; ?>">
-                  <img src="<?php echo $product['thumb']; ?>" alt="">
-                  <?php foreach ($product['second_img'] as $img) { ?>
-                    <img class="hidde" src="<?php echo $img;?>" alt="">
-                  <?php break; } ?>
-                </a>
-                <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
+              <?php foreach ($products as $product) { ?>
+              <div class="product-layout col-lg-4 col-sm-4 col-xs-6">
+                <div class="category-page__content--item">
+                  <span class="category-page__content--item-add_favorits" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></span>
+                  <a href="<?php echo $product['href']; ?>">
+                    <img src="<?php echo $product['thumb']; ?>" alt="">
+                    <?php foreach ($product['second_img'] as $img) { ?>
+                      <img class="hidde" src="<?php echo $img;?>" alt="">
+                    <?php break; } ?>
+                  </a>
+                  <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
+                </div>
               </div>
+              <?php } ?>
             </div>
-            <?php $i++; ?>
-            <?php if ($i == 3) { ?>
-            </div>
-            <?php $i=0;} ?>
-            <?php } ?>
-            <?php if ($i!= 0) {?>
-            </div>
-            <?php } ?>
           </div>
           <div class="row">
             <?php echo $pagination; ?>
@@ -54,7 +45,7 @@
     <?php } else {?>
     <section class="category-page">
     <?php if ($thumb) {?>
-    <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt="">
+    <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><!-- <img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt=""> -->
       <p class="category-page__title--text"><?php echo $heading_title; ?></p>
     </div>
     <?php } ?>
@@ -88,7 +79,7 @@
     <?php } else {?>
       <section class="category-page">
         <?php if ($thumb) {?>
-        <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt="">
+        <div class="category-page__title" style="background: url('<?php echo $thumb; ?>') no-repeat center center; background-size: cover;"><!-- <img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt=""> -->
           <p class="category-page__title--text"><?php echo $heading_title; ?></p>
         </div>
         <?php } ?>
@@ -98,31 +89,22 @@
               <?php echo $content_top; ?>
             </div>
             <div class="items">
-              <?php $i = 0; ?>
-              <?php foreach ($products as $product) { ?>
-              <?php if ($i==0) { ?>
               <div class="row">
-              <?php } ?>
-              <div class="product-layout col-lg-4 col-sm-4 col-xs-12">
-                <div class="category-page__content--item">
-                  <span class="category-page__content--item-add_favorits" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></span>
-                  <a href="<?php echo $product['href']; ?>">
-                    <img src="<?php echo $product['thumb']; ?>" alt="">
-                    <?php foreach ($product['second_img'] as $img) { ?>
-                      <img class="hidde" src="<?php echo $img;?>" alt="">
-                    <?php break; } ?>
-                  </a>
-                  <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
+                <?php foreach ($products as $product) { ?>
+                <div class="product-layout col-lg-4 col-sm-4 col-xs-6">
+                  <div class="category-page__content--item">
+                    <span class="category-page__content--item-add_favorits" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></span>
+                    <a href="<?php echo $product['href']; ?>">
+                      <img src="<?php echo $product['thumb']; ?>" alt="">
+                      <?php foreach ($product['second_img'] as $img) { ?>
+                        <img class="hidde" src="<?php echo $img;?>" alt="">
+                      <?php break; } ?>
+                    </a>
+                    <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
+                  </div>
                 </div>
+                <?php } ?>
               </div>
-              <?php $i++; ?>
-              <?php if ($i == 3) { ?>
-              </div>
-              <?php $i=0;} ?>
-              <?php } ?>
-              <?php if ($i!= 0) {?>
-              </div>
-              <?php } ?>
             </div>
             <div class="row">
               <?php echo $pagination; ?>

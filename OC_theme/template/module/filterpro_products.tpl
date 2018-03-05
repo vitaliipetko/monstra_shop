@@ -1,9 +1,6 @@
-<?php $i = 0; ?>
-<?php foreach ($products as $product) { ?>
-<?php if ($i==0) { ?>
 <div class="row">
-<?php } ?>
-<div class="product-layout col-lg-4 col-sm-4 col-xs-12">
+<?php foreach ($products as $product) { ?>
+<div class="product-layout col-lg-4 col-sm-4 col-xs-6">
   <div class="category-page__content--item">
     <span class="category-page__content--item-add_favorits" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></span>
     <a href="<?php echo $product['href']; ?>">
@@ -15,14 +12,8 @@
     <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
   </div>
 </div>
-<?php $i++; ?>
-<?php if ($i == 3) { ?>
-</div>
-<?php $i=0;} ?>
 <?php } ?>
-<?php if ($i!= 0) {?>
 </div>
-<?php } ?>
 
 
 <?php if(empty($products)) { ?>

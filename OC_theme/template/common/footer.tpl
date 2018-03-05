@@ -17,6 +17,15 @@
           <div class="col-lg-3 col-sm-4 col-xs-12 xs-center"><a href="/"><img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt=""></a>
             <p class="footer__find">find us on</p><a class="footer__find--link-fb" href="https://www.facebook.com/MONSTRAbrand/" target="_blank">Facebook</a><a class="footer__find--link-ins" href="https://www.instagram.com/monstra_official" target="_blank">Instagram</a>
           </div>
+          <div class="col-xs-12">
+            <div class="footer__stories--mobile">
+              <div class="row">
+                <?php foreach ($instagram['posts'] as $post) {?>
+                  <a class="footer__stories--link" href="<?php echo $post['link']?>" target="_blank" title="<?php echo $post['title']?>"><img src="<?php echo $post['img']; ?>" alt="<?php echo $post['title']?>"></a>
+                <?php } ?>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-3 col-sm-4 hidden-xs">
             <ul class="footer__nav">
               <?php foreach ($categories as $category) { ?>
