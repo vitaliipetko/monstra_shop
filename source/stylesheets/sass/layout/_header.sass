@@ -231,6 +231,23 @@ header
 			position: relative
 			&--icons
 				display: none
+				padding: 0px 15px
+				position: relative
+				.nav__logo--mobile
+					position: absolute
+					left: 0
+					right: 0
+					display: inline
+					width: 150px
+					margin: 0 auto
+				.nav__cart
+					top: 0px
+				.nav__lang
+					font-size: 12px
+					margin-right: 0px
+					top: -5px
+					&:after
+						display: none
 			&--item
 				display: inline-block
 				padding: 0px 28px
@@ -341,7 +358,7 @@ header
 				&-btn
 					display: none
 					position: absolute
-					right: 20px
+					left: 20px
 					top: 10px
 					cursor: pointer
 					&:after
