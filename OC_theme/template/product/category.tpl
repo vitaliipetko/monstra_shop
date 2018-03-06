@@ -12,6 +12,9 @@
         <div class="container-fluid">
           <div class="category-page__content--filter">
             <?php echo $content_top; ?>
+            <div class="logo--mobile">
+              <img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt="">
+            </div>
           </div>
           <div class="items">
             <div class="row">
@@ -87,6 +90,9 @@
           <div class="container-fluid">
             <div class="category-page__content--filter">
               <?php echo $content_top; ?>
+              <div class="logo--mobile">
+                <img src="/catalog/view/theme/monstra/assets/images/icons/footer_logo.png" alt="">
+              </div>
             </div>
             <div class="items">
               <div class="row">
