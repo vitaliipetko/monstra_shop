@@ -9,7 +9,13 @@
         <img class="hidde" src="<?php echo $img;?>" alt="">
       <?php break; } ?>
     </a>
-    <p class="category-page__content--item-title"><?php echo $product['name']; ?><span><?php echo $product['price']; ?></span><a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
+    <p class="category-page__content--item-title"><?php echo $product['name']; ?>
+      <?php if (!$product['special']) { ?>
+      <span><?php echo $product['price']; ?></span>
+      <?php } else { ?>
+      <span><?php echo $product['special']; ?><span class="old"><?php echo $product['price']; ?></span></span> 
+      <?php } ?>
+      <a class="category-page__content--item-link" href="<?php echo $product['href']; ?>"><?php echo $button_cart; ?></a></p>
   </div>
 </div>
 <?php } ?>

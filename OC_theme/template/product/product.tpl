@@ -20,8 +20,24 @@
         <div class="col-lg-5 col-sm-12">
           <div class="product-page__content--description"><span class="product-page__content--description-add_favorits" onclick="wishlist.add('<?php echo $product_id; ?>');"></span>
             <p class="product-page__content--description-title"><?php echo $heading_title; ?></p>
-            <p class="product-page__content--description-stock"><?php echo $stock; ?></p>
-            <p class="product-page__content--description-price"><?php echo $price; ?></p>
+            <p class="product-page__content--description-stock">
+              <?php 
+              if (is_numeric($stock)) {
+                foreach ($stock_statuses as $status) {
+                  if ($status['stock_status_id'] == $stock) {
+                    echo $status['name'];
+                  }
+                }
+              } else {
+                echo $stock;
+              }
+              ?>
+            </p>
+            <?php if ($special) { ?>
+            <p class="product-page__content--description-price"><?php echo $special; ?> <span><?php echo $price ?></span></p>
+            <?php } else { ?>
+            <p class="product-page__content--description-price"><?php echo $price ?></p>
+            <?php } ?>
             <p class="product-page__content--description-vendor"><?php echo $text_sku; ?> <?php echo $sku; ?></p>
             <form id="product">
               <div class="row">

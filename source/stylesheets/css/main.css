@@ -2681,6 +2681,13 @@ header nav .nav__main-menu--mobile li .nav__cash--menu li a {
 
 .category-page__content--item-title span {
   display: block;
+  position: relative;
+}
+
+.category-page__content--item-title span .old {
+  font-size: 14px;
+  text-decoration: line-through;
+  opacity: .7;
 }
 
 .category-page__content--item-title a {
@@ -2985,6 +2992,12 @@ header nav .nav__main-menu--mobile li .nav__cash--menu li a {
   padding-bottom: 40px;
   border-bottom: 1px solid #ff96ce;
   margin-bottom: 10px;
+}
+
+.product-page__content--description-price span {
+  font-size: 14px;
+  text-decoration: line-through;
+  opacity: 0.7;
 }
 
 .product-page__content--description-vendor {
