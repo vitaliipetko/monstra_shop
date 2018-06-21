@@ -54,7 +54,8 @@
           <br>
         <?php } ?>
       </p>
-      <a href="<?php echo $checkout; ?>" class="cart-page__apply"><?php echo $button_checkout; ?></a></div>
+      <a href="<?php echo $checkout; ?>" class="cart-page__apply"><?php echo $button_fast; ?></a>
+      <a href="/index.php?route=checkout/checkout" class="cart-page__apply"><?php echo $button_checkout; ?></a></div>
   </div>
 </section>
 <?php echo $footer; ?>

@@ -33,10 +33,14 @@
               }
               ?>
             </p>
-            <?php if ($special) { ?>
-            <p class="product-page__content--description-price"><?php echo $special; ?> <span><?php echo $price ?></span></p>
+            <?php if ($price == '0') { ?>
+            <p class="product-page__content--description-price"></p>
             <?php } else { ?>
-            <p class="product-page__content--description-price"><?php echo $price ?></p>
+            	<?php if ($special) { ?>
+            	<p class="product-page__content--description-price"><?php echo $special; ?> <span><?php echo $price ?></span></p>
+            	<?php } else { ?>
+            	<p class="product-page__content--description-price"><?php echo $price ?></p>
+            	<?php } ?>
             <?php } ?>
             <p class="product-page__content--description-vendor"><?php echo $text_sku; ?> <?php echo $sku; ?></p>
             <form id="product">

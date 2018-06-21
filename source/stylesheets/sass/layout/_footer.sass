@@ -111,6 +111,33 @@
 		color: #fff
 		padding-top: 50px
 		letter-spacing: 1px
+.scroll
+	position: fixed
+	z-index: 999999
+	right: 40px
+	top: 100px
+	display: none
+	width: 40px
+	height: 40px
+	background: #ff96ce
+	border-radius: 50%
+	box-shadow: 0px 2px 15px rgba(0,0,0, 0.3)
+	cursor: pointer
+	opacity: 0.5
+	transition: all .4s
+	&:hover
+		opacity: 1
+	&:after
+		font-family: FontAwesome;
+		position: relative;
+		content: '\f106';
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+		font-weight: 700;
+		top: 7px;
+
 @media screen and (max-width: 768px)
 	.footer
 		&__subscribe
@@ -121,6 +148,10 @@
 				max-width: 230px
 				margin: 0 auto
 				padding-top: 20px
+	.scroll
+		right: 20px
+		top: 60px
+		opacity: 1
 @media screen and (max-width: 480px)
 	.footer
 		&__copyright

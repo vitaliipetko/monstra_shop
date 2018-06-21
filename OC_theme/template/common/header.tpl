@@ -42,7 +42,7 @@
           <div class="col-lg-6 hidden-sm text-right header__right">
             <span class="nav__cabinet">
               <?php if (!$loged) {?>
-                <a href="/index.php?route=account/login">
+                <a href="<?php echo $login; ?>">
                   <img src="/catalog/view/theme/monstra/assets/images/icons/login.svg" alt="">
                 </a>
               <?php } else { ?>
@@ -51,13 +51,13 @@
                 </a>
               <?php } ?>
             </span>
-            <a class="nav__favorits" href="/index.php?route=account/wishlist">
+            <a class="nav__favorits" href="<?php echo $wishlist; ?>">
               <img src="/catalog/view/theme/monstra/assets/images/icons/favorits.svg" alt="">
               <div class="wishlist">
                 <span><?php echo $text_wishlist; ?></span>
               </div>
             </a>
-            <a class="nav__cart" href="/index.php?route=checkout/cart">
+            <a class="nav__cart" href="<?php echo $shopping_cart; ?>">
               <img src="/catalog/view/theme/monstra/assets/images/icons/cart.svg" alt="">
               <div class="cart">
                 <?php echo $cart; ?>
@@ -112,7 +112,7 @@
                   <li class="nav__main-menu--item"><a class="nav__main-menu--item-link" href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
                 <?php break; ?>
                 <?php } ?>
-                <li class="nav__main-menu--item"><a class="nav__main-menu--item-link" href="/index.php?route=blog/blog"><?php echo $blog; ?></a></li>
+                <li class="nav__main-menu--item"><a class="nav__main-menu--item-link" href="<?php echo $blog_url; ?>"><?php echo $blog; ?></a></li>
                 <li class="nav__main-menu--item"><a class="nav__main-menu--item-link" href="<?php echo $contact; ?>"><?php echo $contacts ?></a></li>
               </ul>
               <div class="nav__main-menu--icons text-right">
@@ -154,7 +154,7 @@
                   <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
                 <?php break; ?>
                 <?php } ?>
-                <li><a href="/index.php?route=blog/blog"><?php echo $blog; ?></a></li>
+                <li><a href="<?php echo $blog_url; ?>"><?php echo $blog; ?></a></li>
                 <li><a href="<?php echo $contact; ?>"><?php echo $contacts; ?></a></li>
                 <li><?php echo $currency; ?></li>
                 <li><?php echo $search; ?></li>

@@ -17,6 +17,16 @@ $( document ).ready(function() {
 		} else {
 			$('body').removeClass('fixed');
 		}
+
+		if (scr > 800) {
+			$('.scroll').fadeIn(400);
+		} else {
+			$('.scroll').fadeOut(400);
+		}
+	});
+
+	$('.scroll').click(function(event) {
+		$('html, body').animate({scrollTop: 0},500);	
 	});
 
 	$('.panel-heading').click(function(event) {
