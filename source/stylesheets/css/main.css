@@ -910,6 +910,36 @@ header .nav__fb:hover {
   top: 0;
 }
 
+header .nav__email {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}
+
+header .nav__email img {
+  width: 22px;
+}
+
+header .nav__email:hover {
+  top: 0;
+}
+
+header .nav__pr {
+  padding-top: 5px;
+  color: #fff;
+}
+
+header .nav__pr a {
+  color: #fff;
+  position: relative;
+  top: 0;
+}
+
+header .nav__pr a:hover {
+  top: -5px;
+}
+
 header .nav__cabinet {
   display: inline-block;
   position: relative;
